@@ -1,12 +1,14 @@
 from django.urls import path
-
-from mi_aplicacion.views  import inicio ,agregar_autor, agregar_libro, agregar_editorial, buscar_libro
+from mi_aplicacion import views
+from mi_aplicacion.views  import *
 
 urlpatterns = [
     path("", inicio),
-    path('agregarautor/', agregar_autor),
-    path('agregarlibro/', agregar_libro),
-    path('agregareditorial/', agregar_editorial),
-    path("buscarlibro", buscar_libro)
+    path("autores/", autores, name="autores"),
+    path("libros/", libros , name="libros"),
+    path("editoriales/", editorial, name="editorial"),
+    path('formulario_autor/', views.agregar_autor, name="formulario_autor"),
+
 ]
+
 

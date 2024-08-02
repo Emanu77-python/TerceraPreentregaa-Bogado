@@ -1,43 +1,29 @@
 from django.shortcuts import render, redirect
-from .models import Autor, Libro, Editorial
-from .forms import AutorForm, LibroForm, EditorialForm
+from mi_aplicacion.forms import FormularioAutores
+from mi_aplicacion.models import Autor
+from .forms import FormularioAutores
 # Create your views here.
 
 def inicio(request):
-    return render(request)
+    return render(request, "mi_aplicacion/base.html")
+
+
+def autores(request):
+    return render(request, "mi_aplicacion/autores.html")
+
+def libros(request):
+    return render(request, "mi_aplicacion/libros.html")
+
+def editorial(request):
+    return render(request, "mi_aplicacion/editorial.html")
 
 def agregar_autor(request):
     if request.method == 'POST':
-        form = AutorForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('lista_autores')
-    else:
-        form = AutorForm()
-    return render(request, 'mi_aplicacion/agregar_autor.html', {'form': form})
+        autor = Autor(nombre=request.POST["nombre"], apellido=request.POST["apellido"], nacionalidad=request.POST["nacionalidad"])
+        autor.save()
 
-def agregar_libro(request):
-    if request.method == 'POST':
-        form = LibroForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('lista_libros')
-    else:
-        form = LibroForm()
-    return render(request, 'mi_aplicacion/agregar_libro.html', {'form': form})
-
-def agregar_editorial(request):
-    if request.method == 'POST':
-        form = EditorialForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('inicio') 
-    else:
-        form = EditorialForm()
-    return render(request, 'mi_aplicacion/agregar_editorial.html', {'form': form})
+        return render(request, "mi_aplicacion/inicio.html")
+    return render(request, "mi_aplicacion/formulario_autor.html")
 
 
-def buscar_libro(request):
-    query = request.GET.get('q')
-    resultados = Libro.objects.filter(titulo__icontains=query) if query else None
-    return render(request, 'mi_aplicacion/buscar_libro.html', {'resultados': resultados})
+

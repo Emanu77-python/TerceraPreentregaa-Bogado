@@ -1,17 +1,19 @@
 from django import forms
-from .models import Autor, Libro, Editorial
 
-class AutorForm(forms.ModelForm):
-    class Meta:
-        model = Autor
-        fields = '__all__'
+# Create your models here.
 
-class LibroForm(forms.ModelForm):
-    class Meta:
-        model = Libro
-        fields = '__all__'
 
-class EditorialForm(forms.ModelForm):
-    class Meta:
-        model = Editorial
-        fields = '__all__'
+
+class FormularioAutores(forms.Form):
+    nombre = forms.CharField()
+    apellido = forms.CharField()
+    nacionalidad = forms.CharField()
+
+class Libro(forms.Form):
+    titulo = forms.CharField()
+    autor = forms.CharField()
+
+class Editorial(forms.Form):
+    nombre = forms.CharField()
+    direccion = forms.CharField()
+    email = forms.EmailField()

@@ -1,0 +1,21 @@
+{% extends "mi_aplicacion/base.html" %}
+
+{% load static %}
+
+{% block titulo %} TPB|Agregar_Autores {% endblock titulo %}
+
+{% block main %}
+
+    <form action= "" method= "POST">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="Nombre"></p>
+        <p>Apellido: <input type="text" name=Apellido></p>
+        <p>Nacionalidad: <input type="text" name="Nacionalidad"></p>
+
+        <table>
+            {{ agregar_autor.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}
