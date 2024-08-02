@@ -4,13 +4,13 @@
 
 {% block titulo %} TPB|Agregar_Autores {% endblock titulo %}
 
-{% block main %}
+{% block contenidoQueCambia %}
 
     <form action= "" method= "POST">
         {% csrf_token %}
-        <p>Nombre: <input type="text" name="Nombre"></p>
-        <p>Apellido: <input type="text" name=Apellido></p>
-        <p>Nacionalidad: <input type="text" name="Nacionalidad"></p>
+        <p>nombre: <input type="text" nombre="Nombre"></p>
+        <p>apellido: <input type="text" apellido=Apellido></p>
+        <p>nacionalidad: <input type="text" nacionalidad="Nacionalidad"></p>
 
         <table>
             {{ agregar_autor.as_table }}
@@ -18,4 +18,4 @@
         <input type="submit" value="Enviar">
 
     </form>
-{% endblock main %}
+{% endblock contenidoQueCambia %}
