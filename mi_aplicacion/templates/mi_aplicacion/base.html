@@ -7,11 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-<<<<<<< HEAD
         <title>{% block titulo %} TP-B | Home {% endblock titulo %}</title>
-=======
-        <title>{% block titulo %} {% endblock titulo %}</title>
->>>>>>> 64e651f631c5b4775243d0d1a87cf7512a31b10b
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" rel="icon"  type="image/x-icon">
         <!-- Bootstrap icons-->
@@ -27,15 +23,9 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="/">Inicio</a>
-<<<<<<< HEAD
                 <a class="navbar-brand" href="{% url 'formulario_autor'%}">Agregar Autor</a>
                 <a class="navbar-brand" href="{% url 'formulario_libro'%}">Agregar Libro</a>
                 <a class="navbar-brand" href="{% url 'formulario_editorial'%}">Agregar Editorial</a>
-=======
-                <a class="navbar-brand" href="{% url 'autores' %}">Autores</a>
-                <a class="navbar-brand" href="{% url 'libros' %}">Libros</a>
-                <a class="navbar-brand" href="{% url 'editorial' %}">Editoriales</a>
-                <a class="navbar-brand" href="{% url 'formulario_autor'%}">Agregar Autor</a>
 
                 
                 <a class="btn btn-primary" href="{#signup}">Signup</a>
@@ -52,9 +42,7 @@
                             {% block easteregg %} 
                             <h1 class="mb-5">Bienvenidos a mi Pagina Web!</h1>
                             {% endblock easteregg %}
-=======
-                            <h1 class="mb-5">Generate more leads with a professional landing page!</h1
-                                
+
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -98,11 +86,7 @@
 
         {% block contenidoQueCambia %}
 
-<<<<<<< HEAD
         {% endblock contenidoQueCambia %}
-=======
-        {% endblock%}
->>>>>>> 64e651f631c5b4775243d0d1a87cf7512a31b10b
 
         <!-- Footer-->
         <footer class="footer bg-light">
@@ -110,11 +94,7 @@
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <ul class="list-inline mb-2">
-<<<<<<< HEAD
-                            <li class="list-inline-item"><a href="{% url 'acerca' %}">Top secret</a></li>
-=======
-                            <li class="list-inline-item"><a href="#!">About</a></li>
->>>>>>> 64e651f631c5b4775243d0d1a87cf7512a31b10b
+                            <li class="list-inline-item"><a href="{%url 'acerca' %}">Top Secret</a></li>
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Contact</a></li>
                             <li class="list-inline-item">⋅</li>

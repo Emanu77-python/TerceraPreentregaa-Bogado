@@ -1,8 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from mi_aplicacion.models import Autor, Libro, Editorial
 from django.http import HttpResponse
 from mi_aplicacion.models import Autor
-
 # Create your views here.
 
 def inicio(request):

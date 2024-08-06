@@ -80,5 +80,5 @@ Este proyecto es una aplicación web básica desarrollada en Django. Permite a l
 - **buscar_autor**: Vista para buscar autores.
 - **buscar_editorial**: Vista para buscar editoriales.
 
-** apruebenme plis jajaj
+APROBAME ENZO PORFAVOR jaja
 

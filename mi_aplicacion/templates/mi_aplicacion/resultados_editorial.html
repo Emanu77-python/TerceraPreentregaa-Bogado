@@ -5,13 +5,6 @@
 
     </head>
     <body>
-        <h1>Buscar Editorial</h1>
-        <form method="get" action="{% url 'buscar_editorial' %}">
-            <p>Nombre: <input type="text" name="nombre"></p>
-            <p>Direccion: <input type="text" name="direccion"></p>
-            <p>Email: <input type="text" name="email"></p>
-            <p><input type="submit" value="Buscar"></p>
-        </form>
         {% if editoriales %}
             <h2>Resultados de la búsqueda:</h2>
             <ul>
