@@ -1,7 +1,13 @@
 from django.shortcuts import render, redirect
+<<<<<<< HEAD
 from mi_aplicacion.models import Autor, Libro, Editorial
 from .forms import FormularioAutores
 from django.http import HttpResponse
+=======
+from mi_aplicacion.forms import FormularioAutores
+from mi_aplicacion.models import Autor
+from .forms import FormularioAutores
+>>>>>>> 64e651f631c5b4775243d0d1a87cf7512a31b10b
 # Create your views here.
 
 def inicio(request):
@@ -26,6 +32,7 @@ def agregar_autor(request):
     return render(request, "mi_aplicacion/formulario_autor.html")
 
 
+<<<<<<< HEAD
 def agregar_editorial(request):
     if request.method == 'POST':
         editorial = Editorial(nombre=request.POST["nombre"], direccion=request.POST["direccion"], email=request.POST["email"])
@@ -98,4 +105,6 @@ def buscar_editorial(request):
 
 def acerca(request):
     return render(request, "mi_aplicacion/template.html")
+=======
+>>>>>>> 64e651f631c5b4775243d0d1a87cf7512a31b10b
 

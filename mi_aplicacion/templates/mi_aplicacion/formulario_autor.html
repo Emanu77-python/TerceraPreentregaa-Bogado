@@ -7,6 +7,7 @@
 {% block contenidoQueCambia %}
 
     <form action= "" method= "POST">
+<<<<<<< HEAD
         <h4>Formulario Autor</h4>
         {% csrf_token %}
         <p><input type="text" name="nombre" placeholder="Ingrese Nombre"></p>
@@ -26,4 +27,18 @@
         <p><input type="submit" value="Buscar"></p>
     </form>
 {% endblock contenidoQueCambia %}name
+
+=======
+        {% csrf_token %}
+        <p>nombre: <input type="text" nombre="Nombre"></p>
+        <p>apellido: <input type="text" apellido=Apellido></p>
+        <p>nacionalidad: <input type="text" nacionalidad="Nacionalidad"></p>
+
+        <table>
+            {{ agregar_autor.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock contenidoQueCambia %}
 
