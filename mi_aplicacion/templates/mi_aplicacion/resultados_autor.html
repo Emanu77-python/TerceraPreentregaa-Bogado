@@ -1,0 +1,29 @@
+{% extends "mi_aplicacion/base.html" %}
+
+{% block contenidoQueCambia %} <h1 class="mb-5">Resultados</h1>
+
+
+{% if query %}
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nacionalidad</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for autor in query %}
+        <tr>
+            <br>{{ autor.nombre }}<br>
+            <br>{{ autor.apellido }}<br>
+            <br>{{ autor.editorial }}<br>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>{{ respuesta }}</p>
+{% endif %}
+{% endblock contenidoQueCambia %}

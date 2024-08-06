@@ -1,0 +1,29 @@
+{% extends "mi_aplicacion/base.html" %}
+
+{% load static %}
+
+{% block titulo %} TPB|Agregar_Editorial{% endblock titulo %}
+
+{% block contenidoQueCambia %}
+
+    <form action= "" method= "POST">
+        {% csrf_token %}
+        <p>nombre: <input type="text" name="nombre"></p>
+        <p>direccion: <input type="text" name="direccion"></p>
+        <p>email: <input type="text" name="email"></p>
+
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    </form>
+    <h4> ---------------------------------------------------------------</h4>
+    <h4> ---------------------------------------------------------------</h4>
+    <form action="/buscar_editorial" method="GET">
+    <h4>Buscar</h4>
+    <p><input type="text" name="nombre" placeholder="Ingrese el Nombre"></p>
+    <p><input type="text" name="apellido" placeholder="Ingrese la Direccion"></p>
+    <p><input type="text" name="nacionalidad" placeholder="Ingrese el Email"></p>
+    <p><input type="submit" value="Buscar"></p>
+{% endblock contenidoQueCambia %}name

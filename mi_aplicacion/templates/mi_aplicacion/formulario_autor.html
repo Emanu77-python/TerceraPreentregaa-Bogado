@@ -1,0 +1,29 @@
+{% extends "mi_aplicacion/base.html" %}
+
+{% load static %}
+
+{% block titulo %} TPB|Agregar_Autores {% endblock titulo %}
+
+{% block contenidoQueCambia %}
+
+    <form action= "" method= "POST">
+        <h4>Formulario Autor</h4>
+        {% csrf_token %}
+        <p><input type="text" name="nombre" placeholder="Ingrese Nombre"></p>
+        <p><input type="text" name=apellido placeholder="Ingrese Apellido "></p>
+        <p><input type="text" name="nacionalidad" placeholder="Ingrese Nacionalidad"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+    <h4> ---------------------------------------------------------------</h4>
+    <h4> ---------------------------------------------------------------</h4>
+    <form action="/buscar_autor" method="GET">
+        <h4>Buscar</h4>
+        <p><input type="text" name="nombre" placeholder="Ingrese Nombre"></p>
+        <p><input type="text" name="apellido" placeholder="Ingrese Apellido"></p>
+        <p><input type="text" name="nacionalidad" placeholder="Ingrese Nacionalidad"></p>
+        <p><input type="submit" value="Buscar"></p>
+    </form>
+{% endblock contenidoQueCambia %}name
+

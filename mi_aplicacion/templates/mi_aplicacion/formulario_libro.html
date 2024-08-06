@@ -1,0 +1,28 @@
+{% extends "mi_aplicacion/base.html" %}
+
+{% load static %}
+
+{% block titulo %} TPB|Agregar_Libro {% endblock titulo %}
+
+{% block contenidoQueCambia %}
+
+    <form action= "" method= "POST">
+        {% csrf_token %}
+        <p><input type="text" name="titulo" placeholder="Ingrese el Titulo"></p>
+        <p><input type="text" name="autor" placeholder="Ingrese el Autor"></p>
+        <p><input type="text" name="editorial"  placeholder="Ingrese la Editorial"></p>
+
+
+        <input type="submit" value="Guardar">
+
+    </form>
+    <h4> ---------------------------------------------------------------</h4>
+    <h4> ---------------------------------------------------------------</h4>
+    <form action="/buscar_libro" method="GET">
+        <h4>Buscar</h4>
+        <p><input type="text" name="nombre" placeholder="Ingrese el Titulo"></p>
+        <p><input type="text" name="apellido" placeholder="Ingrese el Autor"></p>
+        <p><input type="text" name="nacionalidad" placeholder="Ingrese la Editorial"></p>
+        <p><input type="submit" value="Buscar"></p>
+    </form>
+{% endblock contenidoQueCambia %}name
